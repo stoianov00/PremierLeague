@@ -1,0 +1,101 @@
+.container {
+  display: grid;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.team-header__league-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  background: no-repeat 50%/152px 132px;
+  background-color: #fff;
+  vertical-align: middle;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.team-header__league-information {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.team-header__league-text {
+  font: normal 700 12px Arial, Helvetica, sans-serif;
+}
+
+.team-header__league-season {
+  font-size: 13px;
+}
+
+.icon-flag {
+  background-color: #ffe1af;
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 13px;
+}
+
+.scheduled-table,
+.standings-table {
+  width: 100%;
+  border-width: 0;
+  font-size: 14px;
+}
+
+.scheduled-table__round {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border: 2px solid lightgray;
+}
+
+.scheduled-table__date {
+  padding-left: 40px;
+}
+
+.home-team {
+  display: inline-block;
+  text-align: right;
+  border: none;
+}
+
+.scheduled-table__goals {
+  text-align: center;
+  font-weight: bold;
+}
+
+.away-team {
+  display: inline-block;
+  border: none;
+}
+
+.home-team__logo,
+.away-team__logo,
+.standings-table__team-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.mat-header-cell,
+.mat-cell,
+.mat-footer-cell {
+  border-bottom: 1px solid lightgray;
+}
+
+.mat-sort-header-sorted {
+  color: black;
+}
+
+.standings-table__team-form {
+  display: inline-block;
+  color: white;
+  width: 22px;
+  text-align: center;
+  border-radius: 2px;
+  margin: 1px;
+}
+
+::ng-deep .mat-tab-label-active {
+  text-align: center;
+  color: white;
+  background-color: #37003c;
+}

@@ -1,0 +1,23 @@
+<ul class="navbar-nav bg-dark" *ngIf="isAuthenticated | async">
+  <li class="nav-item">
+    <a class="nav-link text-white nav-bar__username"
+       [routerLink]="['/authentication/profile']"
+       title="Manage">
+      <i class="bi bi-person nav-bar__username"></i>{{ userName | async }}
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white"
+       [routerLink]="['/authentication/logout']"
+       [state]="{ local: true }"
+       title="Logout">Logout</a>
+  </li>
+</ul>
+<ul class="navbar-nav bg-dark" *ngIf="!(isAuthenticated | async)">
+  <li class="nav-item">
+    <a class="nav-link text-white" [routerLink]="['/authentication/register']">Register</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" [routerLink]="['/authentication/login']">Login</a>
+  </li>
+</ul>

@@ -1,0 +1,33 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+html,
+body {
+  background-color: rgb(229, 229, 229);
+}
+
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-tab-label.mat-tab-label-active {
+  opacity: 1;
+}
