@@ -22,12 +22,12 @@ export default class TeamsListComponent implements OnInit {
   constructor(private service: TeamsDataService) {}
 
   ngOnInit(): void {
-    // this.getFixturesResponse();
-    // this.getStandingsResponse();
+    this.getFixturesResponse();
+    this.getStandingsResponse();
   }
 
   getFixturesResponse() {
-    interval(3000).subscribe((i) => {
+    interval(5000).subscribe(() => {
       this.service.getFixturesResponse().subscribe((response) => {
         let rounds = new Set(response.map((item) => item.league.round));
         rounds.forEach((g) =>
@@ -37,13 +37,11 @@ export default class TeamsListComponent implements OnInit {
           })
         );
       });
-
-      console.log("Fixtures" + i);
     });
   }
 
   getStandingsResponse() {
-    interval(3000).subscribe((i) => {
+    interval(5000).subscribe(() => {
       this.service.getStandingsResponse().subscribe((response) => {
         this.standingsDataSource = new MatTableDataSource(
           response[0].league.standings[0]
@@ -52,8 +50,6 @@ export default class TeamsListComponent implements OnInit {
         this.standingsDataSource.sortingDataAccessor = (obj, property) =>
           this.getProperty(obj, property);
         this.standingsDataSource.sort = this.sort;
-
-        console.log("Standings " + i);
       });
     });
   }

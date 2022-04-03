@@ -21,7 +21,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     ApiAuthorizationModule,
     FootballModule,
     RouterModule.forRoot([
-      { path: "", component: HomeComponent, pathMatch: "full" },
+      { path: "", redirectTo: "api/teams", pathMatch: "full" },
       { path: "**", component: HomeComponent },
     ]),
     RouterModule,
